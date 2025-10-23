@@ -1,0 +1,25 @@
+{
+  "all": [
+    "I was abducted briefly by a polite extraterrestrial who needed directions.",
+    "My smart-home locked me outside because it thought I was a delivery robot."
+  ],
+  "surreal": [
+    "A snail blocked my car because it was leading a protest.",
+    "My shoes formed a union and refused to leave the house."
+  ],
+  "plausible": [
+    "There was an accident two blocks away and traffic was at a standstill.",
+    "My alarm failed due to a power dip; I woke to find my phone at 5%."
+  ],
+  "tech": [
+    "My laptop auto-updated and rebooted in the middle of my commute.",
+    "My calendar synced to the wrong timezone and moved the meeting an hour earlier."
+  ],
+  "funny": [
+    "A pigeon stole my sandwich and I pursued it for moral reasons.",
+    "I was late because I was writing the perfect apology note to being late."
+  ],
+  "noun": ["pigeon", "coffee machine", "snail", "diplomat"],
+  "place": ["roundabout", "tram stop", "kitchen", "server room"],
+  "time": ["five minutes", "half an hour", "until lunchtime"]
+}
