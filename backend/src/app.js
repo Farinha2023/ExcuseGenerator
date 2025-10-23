@@ -2,7 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const helmet = require('helmet');
 const morgan = require('morgan');
-const rateLimitFlexible = require('rate-limit-flexible');
+const { RateLimiterMemory } = require('rate-limiter-flexible'); // ✅ correct import
 
 const excusesRouter = require('./routes/excuses');
 
@@ -12,11 +12,12 @@ app.use(cors({ origin: process.env.FRONTEND_ORIGIN || '*' }));
 app.use(express.json());
 app.use(morgan('dev'));
 
-// basic rate limiting
-const { RateLimitMemory } = require('rate-limit-flexible');
-const rateLimiter = new RateLimitMemory({
-  points: 100, duration: 60 // 100 requests per minute
+// ✅ basic rate limiting
+const rateLimiter = new RateLimiterMemory({
+  points: 100,       // 100 requests
+  duration: 60       // per 60 seconds
 });
+
 app.use((req, res, next) => {
   rateLimiter.consume(req.ip)
     .then(() => next())
